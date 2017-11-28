@@ -1,4 +1,4 @@
-const fetchJsonFeed = require('./lib/fetch-json-feed')
+const fetchJsonFeed = require('./lib/json-feed-fetcher')
 
 module.exports = {
   fetchJsonFeed

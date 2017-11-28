@@ -5,9 +5,15 @@ against scheme
 
 ### Install:
 
-````npm install json-feed-fetcher
+```
+npm install json-feed-fetcher
+```
+
 ### run test:
-``` npm test
+
+```
+npm test
+```
 
 ### Example code:
 
@@ -21,4 +27,4 @@ const schema = {
 jsonDataFetch('http://myendpoint', schema).then(data => {
   console.log(data)
 })
-````
+```

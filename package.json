@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha"
   },
   "author": "Bernt Anker",
   "license": "ISC",
@@ -12,5 +12,16 @@
     "axios": "^0.17.1",
     "is-my-json-valid": "^2.16.1",
     "recursive-lowercase-json": "^0.2.0"
+  },
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "eslint": "^4.12.0",
+    "eslint-config-standard": "^10.2.1",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-node": "^5.2.1",
+    "eslint-plugin-promise": "^3.6.0",
+    "eslint-plugin-standard": "^3.0.1",
+    "mocha": "^4.0.1",
+    "sinon": "^4.1.2"
   }
 }

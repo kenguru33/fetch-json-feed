@@ -1,5 +1,3 @@
-## JSON FEED FETCHER
-
 Fetch json data from an endpoint and returns an array of objects filtered
 against scheme
 

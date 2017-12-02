@@ -14,7 +14,8 @@ const fetchJsonData = (url, schema = {}) => {
     required: true,
     type: 'object',
     properties: schema,
-    additionalProperties: false
+    additionalProperties: false,
+    greedy: true
   })
 
   return axios

@@ -18,8 +18,19 @@ npm test
 ```javascript
 const jsonDataFetch = require('json-feed-fetcher')
 
-const schema = {
-  name: { type: 'string', required: true }
+const vesselSchema = {
+  mmsi: { type: 'string', required: true },
+  name: { type: 'string', required: true },
+  rs: { type: 'string', required: true },
+  state: { type: 'string', required: true },
+  station: {
+    required: true,
+    type: 'object',
+    properties: {
+      name: { type: 'string', required: true }
+    },
+    additionalProperties: false
+  }
 }
 
 jsonDataFetch('http://myendpoint', schema).then(data => {

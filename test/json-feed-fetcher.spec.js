@@ -14,7 +14,11 @@ response.data = [
     Decimal_Longitude: '11.298141666666666',
     Time_stamp: '2017-11-28T19:41:24.000Z',
     SOG: '.0',
-    COG: '260'
+    COG: '260',
+    nested: {
+      id: '1',
+      name: 'nested'
+    }
   },
   {
     MMSI: '259193000',
@@ -54,7 +58,10 @@ describe('fetchJsonData', () => {
   it('should return array of object filtered against schema', () => {
     const schema = {
       mmsi: { type: 'string', required: true },
-      ship_name: { type: 'string', required: true }
+      ship_name: { type: 'string', required: true },
+      nested: {
+        
+      }
     }
     return fetchJsonData('http://dummyurl', schema).then(data => {
       expect(data).to.deep.equal([

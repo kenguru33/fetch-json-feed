@@ -10,13 +10,7 @@ const validator = require('is-my-json-valid')
  * @returns {Promise}
  */
 const fetchJsonData = (url, schema = {}) => {
-  const filter = validator.filter({
-    required: true,
-    type: 'object',
-    properties: schema,
-    additionalProperties: false,
-    greedy: true
-  })
+  const filter = validator.filter(schema)
 
   return axios
     .get(url)

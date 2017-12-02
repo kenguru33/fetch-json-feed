@@ -1,6 +1,6 @@
 {
   "name": "json-feed-fetcher",
-  "version": "1.0.10",
+  "version": "1.0.11",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -24,8 +24,8 @@
     "mocha": "^4.0.1",
     "sinon": "^4.1.2"
   },
-  "repository" :
-  { "type" : "git"
-  , "url" : "https://github.com/kenguru33/fetch-json-feed"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kenguru33/fetch-json-feed"
   }
 }

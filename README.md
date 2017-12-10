@@ -19,19 +19,28 @@ npm test
 const jsonDataFetch = require('json-feed-fetcher')
 
 const vesselSchema = {
-  mmsi: { type: 'string', required: true },
-  name: { type: 'string', required: true },
-  rs: { type: 'string', required: true },
-  state: { type: 'string', required: true },
-  station: {
-    required: true,
-    type: 'object',
-    properties: {
-      name: { type: 'string', required: true }
-    },
-    additionalProperties: false
-  }
+  required: true,
+  type: 'object',
+  properties: {
+    mmsi: {type: 'string', required: true},
+    name: {type: 'string', required: true},
+    rs: {type: 'string', required: true},
+    state: {type: 'string', required: true},
+    email: {type: 'string', required: true},
+    mobile: {type: 'string', required: true},
+    station: {
+      required: true,
+      type: 'object',
+      properties: {
+        name: {type: 'string', required: true},
+        region: {type: 'string', required: true}
+      },
+      additionalProperties: false
+    }
+  },
+  additionalProperties: false
 }
+
 
 jsonDataFetch('http://myendpoint', schema).then(data => {
   console.log(data)

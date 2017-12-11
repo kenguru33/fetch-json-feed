@@ -18,6 +18,9 @@ const fetchJsonData = (url, schema = {}) => {
       return recursivelyLowercaseJSONKeys(response.data)
     })
     .then(data => {
+      if (!Array.isArray(data)) {
+        return filter(obj)
+      }
       return data.map(obj => {
         return filter(obj)
       })

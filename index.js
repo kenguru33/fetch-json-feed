@@ -7,11 +7,10 @@ const validator = require('is-my-json-valid')
  * Filter and validate against schema.
  * @param {string} url
  * @param {*} schema
- * @returns {Promise}
+ * @returns {PromiseLike<Object>}
  */
 const fetchJsonData = (url, schema = {}) => {
   const filter = validator.filter(schema)
-
   return axios
     .get(url)
     .then(response => {
@@ -19,10 +18,11 @@ const fetchJsonData = (url, schema = {}) => {
     })
     .then(data => {
       if (!Array.isArray(data)) {
-        return filter(obj)
+        console.log(data)
+        return filter(data)
       }
-      return data.map(obj => {
-        return filter(obj)
+      return data.map(data => {
+        return filter(data)
       })
     })
 }

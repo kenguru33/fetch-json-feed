@@ -1,5 +1,5 @@
 const axios = require('axios')
-const fetchJsonData = require('../index')
+const fetchJsonData = require('../src/index')
 const expect = require('chai').expect
 const sinon = require('sinon')
 

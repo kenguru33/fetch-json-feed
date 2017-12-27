@@ -1,5 +1,5 @@
-Fetch json data from an endpoint and returns an array of objects filtered
-against scheme
+Fetch json data from an endpoint and returns an array of objects or a single object filtered
+against scheme. All properties key name are coverted to lowercase.
 
 ### Install:
 
